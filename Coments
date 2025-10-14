@@ -1,0 +1,29 @@
+"""
+Este programa calcula la posición de un objeto en un tiempo
+cuando se lanza desde una altura.
+La fórmula utilizada es:
+y = h - (0.5)*g*t^2
+donde g es la gravedad (9.8 m/s^2).
+
+argumentos: 
+h: altura inicial (metros)
+t: tiempo (segundos)
+y: posición del objeto en el tiempo t (metros)
+
+Ejemplo de uso:
+Si se lanza un objeto desde una altura de 20 metros con una velocidad inicial   de 5 m/s y se quiere saber su posición después de 2 segundos,
+el programa calculará y mostrará la posición del objeto en ese tiempo.
+
+"""
+# h es la altura a la que se lanza el objeto
+h = float(input("Dime una altura en metros: "))
+# t es el tiempo en segundos
+t = float(input("Dime un tiempo en segundos: "))
+# y es la posición del objeto en el tiempo t
+#utilizamos la formula del MRUA para calcular la posición
+y = h - (9.8*0.5) * t**2
+#calcular el tiempo en el que el objeto toca el suelo
+if y < 0:
+    print("El objeto ha tocado el suelo.")  
+else:
+    print("La posición del objeto en el tiempo es:", y, "metros")
